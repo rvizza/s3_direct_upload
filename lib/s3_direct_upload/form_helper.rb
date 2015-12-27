@@ -24,7 +24,7 @@ module S3DirectUpload
           bucket: options[:bucket] || S3DirectUpload.config.bucket,
           ssl: true,
           acl: "public-read",
-          expiration: 10.hours.from_now.utc.iso8601,
+          expiration: 240.hours.from_now.utc.iso8601,
           max_file_size: 500.megabytes,
           callback_method: "POST",
           callback_param: "file",
